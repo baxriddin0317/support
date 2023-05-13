@@ -26,8 +26,8 @@ const cardsData = [
 
 const Cards = () => {
   return (
-    <section className='max-w-4xl py-20 mx-auto px-5'>
-      <div className='max-w-3xl mx-auto space-y-6 mb-16'>
+    <section className='max-w-4xl mx-auto px-3 py-10 md:py-20 md:px-5'>
+      <div className='max-w-3xl mx-auto space-y-4 md:space-y-6 mb-16'>
         {cardsData.map((data) => (
           <Card key={data.id} data={data} />
         ))}
@@ -47,9 +47,9 @@ const Cards = () => {
         </div>
       </div>
 
-      <div className='max-w-3xl mx-auto px-5 text-center mt-12'>
+      <div className='max-w-3xl mx-auto md:px-5 text-center mt-12'>
         <h3 className='text-2xl'>Lorem ipsum dolor sit amet</h3>
-        <p className='mt-3'>
+        <p className='text-sm leading-6 md:text-base mt-3'>
           consectetur adipisicing elit. Enim dignissimos distinctio rerum
           asperiores temporibus aut quia nam accusamus reiciendis perspiciatis.
           Quos corporis iste laudantium vero itaque culpa eos
@@ -63,9 +63,9 @@ export default Cards;
 
 const Card = ({ data }) => {
   return (
-    <div className='border border-gray-300 rounded-lg hover:shadow-lg transition-shadow duration-200 py-5 px-8'>
-      <div className='flex items-start space-x-4'>
-        <div className='max-w-[4rem] shrink-0'>
+    <div className='border border-gray-300 rounded-lg hover:shadow-lg transition-shadow duration-200 p-3 lg:py-5 lg:px-8'>
+      <div className='flex items-start space-x-3 md:space-x-4'>
+        <div className='max-w-[3.5rem] md:max-w-[4rem] shrink-0'>
           <img
             className='w-full object-contain'
             src={require(`../assets/${data.imgName}.png`)}
@@ -75,9 +75,9 @@ const Card = ({ data }) => {
 
         <div className='flex-1 text-blue-800 '>
           <h3 className='text-xl font-medium'>{data.title}</h3>
-          <p className='mt-1'>This is more infomation</p>
+          <p className='text-sm md:text-base mt-1'>This is more infomation</p>
 
-          <div className='flex items-center justify-between mt-8'>
+          <div className='flex items-center justify-between text-sm md:text-base mt-5 md:mt-8'>
             <Link to='/'>Link to learn more</Link>
             <Link to='/'>Link to schedule more</Link>
           </div>

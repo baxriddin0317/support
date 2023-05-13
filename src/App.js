@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className='max-w-7xl px-10 mx-auto'>
+      <main className='max-w-7xl px-5 md:px-10 mx-auto'>
         {/* hero */}
         <section className='relative py-10'>
           <h1 className='text-2xl md:text-4xl text-center text-blue-800 font-semibold mt-4'>
